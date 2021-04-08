@@ -1,0 +1,358 @@
+/* 
+1- Posicionamiento --> static, absolute, relative, fixed
+2- Modelo de caja (Box model) --> margin, border, padding, content
+3- Tipografía --> tipos, tamaños de fuente, etc
+4- Estilos visuales --> box-shadow, border-radius, gradient, etc
+5- Otros --> reglas CSS y más */
+:root{
+  --bitcoin-orange: #F7931A;
+  --soft-orange: #FFE9D5;
+  --secondary-blue: #1A9AF7;
+  --soft-blue: #E7F5FF;
+  --warm-black: #201E1C;
+  --other-black: #282623;
+  --grey: #BABABA;
+  --other-grey:#757575;
+  --off-white: #FAF8F7;
+  --just-white: #FFFFFF;
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%)
+}
+header img{
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+}
+header .headerTitleContainer {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 280px;
+  margin-top: 50px;
+  align-self: center;
+}
+header .headerTitleContainer h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--just-white);
+  line-height: 2.6rem;
+}
+header .headerTitleContainer p{
+  color: var(--soft-orange);
+  font-size: 1.4rem;
+  margin-top: 24px;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+header .headerTitleContainer .headerButton {
+  position: absolute;
+  top: 270px;
+  left: calc(50% - 114.5px);
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--other-black);
+}
+header .headerTitleContainer .headerButton span{
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url(./assets/icons/down-arrow.svg);
+}
+main{
+  width: 100%;
+  height: auto;
+  background: var(--off-white);
+}
+main .mainExchangeContainer{
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  text-align: center;
+}
+main .mainExchangeContainer .backgroundExchangeImg{
+  background-image: url(./assets/img/Bitcoin.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 195px;
+  height: 195px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+main .mainExchangeContainer .mainExchangeContainerTitle{
+  width: 90%;
+  margin: 0 auto;
+  min-width: 288px;
+  max-width: 900px;
+}
+main .mainExchangeContainer .mainExchangeContainerTitle  h2{
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: var(--warm-black);
+  margin-bottom: 30px;
+}
+main .mainExchangeContainer .mainExchangeContainerTitle p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--other-grey);
+  margin-bottom: 30px;
+}
+main .mainExchangeContainer  .mainTableContainer .table{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 60%;
+  gap: 1.5px;
+  max-width: 194px;
+  min-width: 190px;
+  position: relative;
+}
+main .mainExchangeContainer  .mainTableContainer h3 {
+  color: var(--bitcoin-orange);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 45px;
+  margin-left: -100px;
+  margin-bottom: 12px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div{
+  justify-self: start;
+  width: 95px;
+  height: 39px;
+  padding: 11px 12px;
+  background: var(--just-white);
+  display: flex;
+  align-items: center;
+}
+main .mainExchangeContainer  .mainTableContainer .table div:nth-child(1){
+  border-top-left-radius: 10px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div:nth-child(2){
+  border-top-right-radius: 10px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div:nth-child(7){
+  border-bottom-left-radius: 10px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div:nth-child(8){
+  border-bottom-right-radius: 10px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div h4{
+  text-align: start;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: var(--grey);
+}
+main .mainExchangeContainer  .mainTableContainer .table div p{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: start;
+  letter-spacing: -0.02em;
+  color: var(--other-grey);
+}
+main .mainExchangeContainer  .mainTableContainer .table div span{
+  background-image: url(/css/assets/icons/trending-up.svg);
+  width: 11px;
+  height: 8px;
+  display: inline-block;
+  margin: 0 5px;
+}
+main .mainExchangeContainer  .mainTableContainer .table div:nth-child(3) span{
+  background-image: url(/css/assets/icons/trending-down.svg);
+  width: 11px;
+  height: 8px;
+  display: inline-block;
+  margin: 0 5px;
+}
+main .mainExchangeContainer  .mainTableContainer .tableUpdateDate{
+  background: var(--soft-orange);
+  color: var(--warm-black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  width: 173px;
+  height: 31px;
+  margin: 0 auto;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-weight: 300;
+  margin-bottom: 64px;
+}
+main .mainExchangeContainer  .mainTableContainer.secondTable h3{
+  color: var(--secondary-blue)
+}
+main .mainExchangeContainer  .mainTableContainer.secondTable .table{
+  position: relative;
+}
+main .mainExchangeContainer  .mainTableContainer.secondTable div p {
+  text-align: center;
+  margin: 0 auto;
+}
+main .tableArrowRight{
+  width: 7.41px;
+  Height: 14px;
+  background-image: url(/css/assets/icons/right-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 115%;
+  bottom: calc(100% - 90px);
+}
+main .tableArrowleft{
+  width: 7.41px;
+  Height: 14px;
+  background-image: url(/css/assets/icons/left-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 115%;
+  bottom: calc(100% - 90px);
+}
+main .mainProductsDetails {
+  background: var(--warm-black);
+  position: relative;
+  padding: 20px 10px;
+  height: auto;
+  min-width: 320px;
+}
+main .mainProductsDetails .batataLogo {
+  background-image: url(/css/assets/icons/batata.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 41px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: -10px;
+}
+main .mainProductsDetails h3 {
+  color: var(--just-white);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+main .mainProductsDetails p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--other-grey);
+  width: 100%;
+  height: 100%;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+main .mainProductsDetails .productCardsContainer .productDetailCard {
+  width: 90%;
+  margin: 16px auto;
+  text-align: start;
+  background: var(--other-black);
+  padding: 16px;
+  border-radius: 4px;
+}
+main .mainProductsDetails .productCardsContainer span {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+main .mainProductsDetails .productCardsContainer .clock{
+  background-image: url(/css/assets/icons/clock.svg);
+}
+main .mainProductsDetails .productCardsContainer .eye{
+  background-image: url(/css/assets/icons/eye.svg);
+}
+main .mainProductsDetails .productCardsContainer .dollar{
+  background-image: url(/css/assets/icons/dollar-sign.svg);
+}
+main .mainProductsDetails .productCardsContainer .checkout{
+  background-image: url(/css/assets/icons/check-circle.svg);
+}
+main .mainProductsDetails .productCardsContainer .productCardTitle{
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 18px;
+color: var(--just-white);
+margin: 10px auto;
+}
+main .mainProductsDetails .productCardsContainer .productCardBody{
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+main .bitcoinImgContainer {
+  background-image: url(/css/assets/img/bitcoinbaby.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-width: 320px;
+  height: 70vh;
+  text-align: center;
+}
+main .bitcoinImgContainer h2 {
+  padding-top: 64px;
+  color: var(--just-white);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+}

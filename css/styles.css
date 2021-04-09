@@ -4,18 +4,17 @@
 3- Tipografía --> tipos, tamaños de fuente, etc
 4- Estilos visuales --> box-shadow, border-radius, gradient, etc
 5- Otros --> reglas CSS y más */
-:root{
-  --bitcoin-orange: #F7931A;
-  --soft-orange: #FFE9D5;
-  --secondary-blue: #1A9AF7;
-  --soft-blue: #E7F5FF;
-  --warm-black: #201E1C;
+:root {
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
   --other-black: #282623;
-  --grey: #BABABA;
-  --other-grey:#757575;
-  --off-white: #FAF8F7;
-  --just-white: #FFFFFF;
-
+  --grey: #bababa;
+  --other-grey: #757575;
+  --off-white: #faf8f7;
+  --just-white: #ffffff;
 }
 * {
   box-sizing: border-box;
@@ -24,7 +23,7 @@
 }
 html {
   font-size: 62.5%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
 }
 header {
@@ -36,9 +35,13 @@ header {
   width: 100%;
   min-width: 320px;
   height: 334px;
-  background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%)
+  background: linear-gradient(
+    207.8deg,
+    var(--warm-black) 16.69%,
+    var(--bitcoin-orange) 100%
+  );
 }
-header img{
+header img {
   width: 150px;
   height: 24px;
   margin-top: 60px;
@@ -58,7 +61,7 @@ header .headerTitleContainer h1 {
   color: var(--just-white);
   line-height: 2.6rem;
 }
-header .headerTitleContainer p{
+header .headerTitleContainer p {
   color: var(--soft-orange);
   font-size: 1.4rem;
   margin-top: 24px;
@@ -82,25 +85,25 @@ header .headerTitleContainer .headerButton {
   text-decoration: none;
   color: var(--other-black);
 }
-header .headerTitleContainer .headerButton span{
+header .headerTitleContainer .headerButton span {
   display: inline-block;
   width: 13px;
   height: 8px;
   margin-left: 10px;
   background-image: url(./assets/icons/down-arrow.svg);
 }
-main{
+main {
   width: 100%;
   height: auto;
   background: var(--off-white);
 }
-main .mainExchangeContainer{
+main .mainExchangeContainer {
   width: 100%;
   height: auto;
   padding-top: 80px;
   text-align: center;
 }
-main .mainExchangeContainer .backgroundExchangeImg{
+main .mainExchangeContainer .backgroundExchangeImg {
   background-image: url(./assets/img/Bitcoin.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -110,13 +113,13 @@ main .mainExchangeContainer .backgroundExchangeImg{
   margin: 0 auto;
   margin-bottom: 40px;
 }
-main .mainExchangeContainer .mainExchangeContainerTitle{
+main .mainExchangeContainer .mainExchangeContainerTitle {
   width: 90%;
   margin: 0 auto;
   min-width: 288px;
   max-width: 900px;
 }
-main .mainExchangeContainer .mainExchangeContainerTitle  h2{
+main .mainExchangeContainer .mainExchangeContainerTitle h2 {
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 2.6rem;
@@ -130,7 +133,18 @@ main .mainExchangeContainer .mainExchangeContainerTitle p {
   color: var(--other-grey);
   margin-bottom: 30px;
 }
-main .mainExchangeContainer  .mainTableContainer .table{
+main .mainExchangeContainer .tableContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 75px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  overflow: hidden;
+  margin: 0 55px;
+}
+main .mainExchangeContainer .mainTableContainer .table {
+  scroll-snap-align: center;
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto auto;
@@ -140,7 +154,7 @@ main .mainExchangeContainer  .mainTableContainer .table{
   min-width: 190px;
   position: relative;
 }
-main .mainExchangeContainer  .mainTableContainer h3 {
+main .mainExchangeContainer .mainTableContainer h3 {
   color: var(--bitcoin-orange);
   font-style: normal;
   font-weight: bold;
@@ -150,7 +164,7 @@ main .mainExchangeContainer  .mainTableContainer h3 {
   margin-left: -100px;
   margin-bottom: 12px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div{
+main .mainExchangeContainer .mainTableContainer .table div {
   justify-self: start;
   width: 95px;
   height: 39px;
@@ -159,21 +173,21 @@ main .mainExchangeContainer  .mainTableContainer .table div{
   display: flex;
   align-items: center;
 }
-main .mainExchangeContainer  .mainTableContainer .table div:nth-child(1){
+main .mainExchangeContainer .mainTableContainer .table div:nth-child(2) {
   border-top-left-radius: 10px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div:nth-child(2){
+main .mainExchangeContainer .mainTableContainer .table div:nth-child(3) {
   border-top-right-radius: 10px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div:nth-child(7){
+main .mainExchangeContainer .mainTableContainer .table div:nth-child(8) {
   border-bottom-left-radius: 10px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div:nth-child(8){
+main .mainExchangeContainer .mainTableContainer .table div:nth-child(9) {
   border-bottom-right-radius: 10px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div h4{
+main .mainExchangeContainer .mainTableContainer .table div h4 {
   text-align: start;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -181,8 +195,8 @@ main .mainExchangeContainer  .mainTableContainer .table div h4{
   /* letter-spacing: -0.02em; */
   color: var(--grey);
 }
-main .mainExchangeContainer  .mainTableContainer .table div p{
-  font-family: 'Inter', sans-serif;
+main .mainExchangeContainer .mainTableContainer .table div p {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.4rem;
@@ -191,21 +205,21 @@ main .mainExchangeContainer  .mainTableContainer .table div p{
   /* letter-spacing: -0.02em; */
   color: var(--other-grey);
 }
-main .mainExchangeContainer  .mainTableContainer .table div span{
+main .mainExchangeContainer .mainTableContainer .table div span {
   background-image: url(/css/assets/icons/trending-up.svg);
   width: 11px;
   height: 8px;
   display: inline-block;
   margin: 0 5px;
 }
-main .mainExchangeContainer  .mainTableContainer .table div:nth-child(3) span{
+main .mainExchangeContainer .mainTableContainer .table div:nth-child(3) span {
   background-image: url(/css/assets/icons/trending-down.svg);
   width: 11px;
   height: 8px;
   display: inline-block;
   margin: 0 5px;
 }
-main .mainExchangeContainer  .mainTableContainer .tableUpdateDate{
+main .mainExchangeContainer .mainTableContainer .tableUpdateDate {
   background: var(--soft-orange);
   color: var(--warm-black);
   display: flex;
@@ -217,42 +231,42 @@ main .mainExchangeContainer  .mainTableContainer .tableUpdateDate{
   margin: 0 auto;
   margin-top: 16px;
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 1.2rem;
   line-height: 14.52px;
   font-weight: 300;
   margin-bottom: 64px;
 }
-main .mainExchangeContainer  .mainTableContainer.secondTable h3{
-  color: var(--secondary-blue)
+main .mainExchangeContainer .mainTableContainer.secondTable h3 {
+  color: var(--secondary-blue);
 }
-main .mainExchangeContainer  .mainTableContainer.secondTable .table{
+main .mainExchangeContainer .mainTableContainer.secondTable .table {
   position: relative;
 }
-main .mainExchangeContainer  .mainTableContainer.secondTable div p {
+main .mainExchangeContainer .mainTableContainer.secondTable div p {
   text-align: center;
   margin: 0 auto;
 }
-main .tableArrowRight{
+main .tableArrowRight {
   width: 7.41px;
-  Height: 14px;
+  height: 14px;
   background-image: url(/css/assets/icons/right-arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  left: 115%;
+  left: 105%;
   bottom: calc(100% - 90px);
 }
-main .tableArrowleft{
+main .tableArrowleft {
   width: 7.41px;
-  Height: 14px;
+  height: 14px;
   background-image: url(/css/assets/icons/left-arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
   position: absolute;
-  right: 115%;
+  right: 105%;
   bottom: calc(100% - 90px);
 }
 main .mainProductsDetails {
@@ -302,6 +316,7 @@ main .mainProductsDetails .productCardsContainer .productDetailCard {
   background: var(--other-black);
   padding: 16px;
   border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
 }
 main .mainProductsDetails .productCardsContainer span {
   background-repeat: no-repeat;
@@ -311,27 +326,27 @@ main .mainProductsDetails .productCardsContainer span {
   height: 20px;
   display: block;
 }
-main .mainProductsDetails .productCardsContainer .clock{
+main .mainProductsDetails .productCardsContainer .clock {
   background-image: url(/css/assets/icons/clock.svg);
 }
-main .mainProductsDetails .productCardsContainer .eye{
+main .mainProductsDetails .productCardsContainer .eye {
   background-image: url(/css/assets/icons/eye.svg);
 }
-main .mainProductsDetails .productCardsContainer .dollar{
+main .mainProductsDetails .productCardsContainer .dollar {
   background-image: url(/css/assets/icons/dollar-sign.svg);
 }
-main .mainProductsDetails .productCardsContainer .checkout{
+main .mainProductsDetails .productCardsContainer .checkout {
   background-image: url(/css/assets/icons/check-circle.svg);
 }
-main .mainProductsDetails .productCardsContainer .productCardTitle{
-font-style: normal;
-font-weight: bold;
-font-size: 1.8rem;
-line-height: 1.8rem;
-color: var(--just-white);
-margin: 10px auto;
+main .mainProductsDetails .productCardsContainer .productCardTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: var(--just-white);
+  margin: 10px auto;
 }
-main .mainProductsDetails .productCardsContainer .productCardBody{
+main .mainProductsDetails .productCardsContainer .productCardBody {
   margin: 0;
   font-style: normal;
   font-weight: 500;
@@ -363,8 +378,8 @@ main .mainPlansContainer {
   width: 100%;
   min-width: 320px;
 }
-main .mainPlansContainer .plansTitle{
-  margin: 64px auto;
+main .mainPlansContainer .plansTitle {
+  margin: 64px auto 0 auto;
   min-width: 288px;
   width: 80%;
 }
@@ -384,23 +399,25 @@ main .mainPlansContainer .plansTitle p {
   color: var(--other-grey);
   margin-top: 24px;
 }
-main .mainPlansContainer .containerSlider{
-  padding: 0 30px;
+main .mainPlansContainer .containerSlider {
+  padding: 50px 0 0;
   height: 320px;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
+  margin: 0 65px;
   justify-content: space-between;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
-  scroll-snap-align-type: proximity;
-  align-items: center;
+  scroll-snap-type: x proximity;
+  overflow: hidden;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard{
+main .mainPlansContainer .containerSlider .plainsContainerCard {
   scroll-snap-align: center;
-  margin: 0 auto;
+  /* margin: 0 1.5rem; */
   background: var(--just-white);
   min-width: 190px;
-  max-width: 230px;
+  max-width: 200px;
   height: 247px;
   box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
   border-radius: 8px;
@@ -415,7 +432,7 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .recommended {
   width: 100px;
   height: 30px;
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.2rem;
@@ -423,7 +440,7 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .recommended {
   color: var(--just-white);
   padding: 8px;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardTitle{
+main .mainPlansContainer .containerSlider .plainsContainerCard .planCardTitle {
   padding-top: 31px;
   padding-bottom: 8px;
   font-style: normal;
@@ -431,8 +448,8 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .planCardTitle{
   font-size: 1.4rem;
   line-height: 1.8rem;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardPrice{
-  font-family: 'Inter', sans-serif;
+main .mainPlansContainer .containerSlider .plainsContainerCard .planCardPrice {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 5.2rem;
@@ -440,8 +457,13 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .planCardPrice{
   letter-spacing: -0.08em;
   padding-bottom: 16px;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardPrice span{
-  font-family: 'Inter', sans-serif;
+main
+  .mainPlansContainer
+  .containerSlider
+  .plainsContainerCard
+  .planCardPrice
+  span {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.2rem;
@@ -449,16 +471,20 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .planCardPrice sp
   text-align: center;
   vertical-align: text-top;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardSaving{
+main .mainPlansContainer .containerSlider .plainsContainerCard .planCardSaving {
   color: var(--other-grey);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardCallToAction{
+main
+  .mainPlansContainer
+  .containerSlider
+  .plainsContainerCard
+  .planCardCallToAction {
   min-width: 151px;
   height: 48px;
   font-style: normal;
@@ -466,15 +492,20 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .planCardCallToAc
   font-size: 1.4rem;
   line-height: 1.8rem;
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: var(--warm-black);
   background: var(--off-white);
-  border: 2px solid #F7931A;
+  border: 2px solid #f7931a;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 16px;
 }
-main .mainPlansContainer .containerSlider .plainsContainerCard .planCardCallToAction span{
+main
+  .mainPlansContainer
+  .containerSlider
+  .plainsContainerCard
+  .planCardCallToAction
+  span {
   background-image: url(/css/assets/icons/orange-right-arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -483,4 +514,45 @@ main .mainPlansContainer .containerSlider .plainsContainerCard .planCardCallToAc
   height: 14px;
   display: inline-block;
   vertical-align: text-bottom;
+}
+.arrowLeft {
+  background-image: url(/css/assets/icons/left-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 0;
+}
+.arrowRight {
+  background-image: url(/css/assets/icons/right-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 0;
+}
+footer {
+  width: 100%;
+  height: 150px;
+  background: var(--bitcoin-orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footerEnlaces ul li {
+  list-style: none;
+}
+footer .footerEnlaces ul li a {
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }

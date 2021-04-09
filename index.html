@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/breakpoint-1.css" media="(min-width: 800px)">
   <title>Document</title>
 </head>
 <body>
@@ -24,37 +25,39 @@
         <h2>Visibilizamos todas las tasas de cambio.</h2>
         <p>Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
       </div>
-      <section class="mainTableContainer">
-        <h3>Monedas</h3>
-        <div class="table">
-        <span class="tableArrowRight"></span>
-         <div><h4>Bitcoin</h4></div>
-         <div><p>$ 1.96 </p><span></span></div>
-         <div><h4>Ethereum</h4></div>
-         <div><p>$ 0.07</p> <span></span></div>
-         <div><h4>Ripple</h4></div>
-         <div><p>$ 2.15</p> <span></span></div>
-         <div><h4>Stellar</h4></div>
-         <div><p>$ 4.96</p> <span></span></div>
-        </div>
-        <p class="tableUpdateDate"><b>Actualizado:</b> 19 Julio 23:45</p>
+      <section class="tableContainer">
+        <section class="mainTableContainer">
+          <h3>Monedas</h3>
+          <div class="table">
+            <span class="tableArrowRight"></span>
+            <div><h4>Bitcoin</h4></div>
+            <div><p>$ 1.96 </p><span></span></div>
+            <div><h4>Ethereum</h4></div>
+            <div><p>$ 0.07</p> <span></span></div>
+            <div><h4>Ripple</h4></div>
+            <div><p>$ 2.15</p> <span></span></div>
+            <div><h4>Stellar</h4></div>
+            <div><p>$ 4.96</p> <span></span></div>
+          </div>
+          <p class="tableUpdateDate"><b>Actualizado:</b> 19 Julio 23:45</p>
+        </section>
+        <section class="mainTableContainer secondTable">
+          <h3>Comisiones</h3>
+          <div class="table">
+            <span class="tableArrowleft"></span>
+            <div><h4>Bitrade</h4></div>
+            <div><p>$ 12.96 </p></div>
+            <div><h4>Bitpreco</h4></div>
+            <div><p>$ 13.07 </p></div>
+            <div><h4>Novadax</h4></div>
+            <div><p>$ 13.15 </p></div>
+            <div><h4>Coinext</h4></div>
+            <div><p>$ 14.96 </p></div>
+          </div>
+          <p class="tableUpdateDate"><b>Actualizado:</b> 19 Julio 23:45</p>
         </section>
       </section>
-      <!-- <section class="mainTableContainer secondTable">
-        <h3>Comisiones</h3>
-        <div class="table">
-        <span class="tableArrowleft"></span>
-         <div><h4>Bitrade</h4></div>
-         <div><p>$ 12.96 </p></div>
-         <div><h4>Bitpreco</h4></div>
-         <div><p>$ 13.07 </p></div>
-         <div><h4>Novadax</h4></div>
-         <div><p>$ 13.15 </p></div>
-         <div><h4>Coinext</h4></div>
-         <div><p>$ 14.96 </p></div>
-        </div>
-        <p class="tableUpdateDate"><b>Actualizado:</b> 19 Julio 23:45</p>
-      </section> -->
+    </section>
     <section class="mainProductsDetails">
       <span class="batataLogo"></span>
       <div>
@@ -93,35 +96,51 @@
         <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
       </div>
       <section class="containerSlider">
-        <article class="plainsContainerCard">
+        <article id="cardOne" class="plainsContainerCard">
           <p class="recommended">Recomendado</p>
           <div class="planInfoContainer">
             <h3 class="planCardTitle">Pago Anual</h3>
             <p class="planCardPrice"><span>$</span>99</p>
             <p class="planCardSaving">*Ahorras $129 comparado al plan mensual.</p>
             <button class="planCardCallToAction">Escoger este <span></span></button>
+            <a href="#cardTwo"><span class="arrowRight"></span></a>
           </div>
         </article>
-        <article class="plainsContainerCard">
-          <p class="recommended">Recomendado</p>
+        <article id="cardTwo" class="plainsContainerCard">
+          <a href="#cardOne"><span class="arrowLeft"></span></a>
+          <p class="recommended">Intermedio</p>
           <div class="planInfoContainer">
             <h3 class="planCardTitle">Pago Anual</h3>
-            <p class="planCardPrice"><span>$</span>99</p>
-            <p class="planCardSaving">*Ahorras $129 comparado al plan mensual.</p>
+            <p class="planCardPrice"><span>$</span>110</p>
+            <p class="planCardSaving">*Ahorras $150 comparado al plan mensual.</p>
             <button class="planCardCallToAction">Escoger este <span></span></button>
+            <a href="#cardthree"><span class="arrowRight"></span></a>
           </div>
         </article>
-        <article class="plainsContainerCard">
-          <p class="recommended">Recomendado</p>
+        <article id="cardthree" class="plainsContainerCard">
+          <a href="#cardTwo"><span class="arrowLeft"></span></a>
+          <p class="recommended">Experto</p>
           <div class="planInfoContainer">
             <h3 class="planCardTitle">Pago Anual</h3>
-            <p class="planCardPrice"><span>$</span>99</p>
-            <p class="planCardSaving">*Ahorras $129 comparado al plan mensual.</p>
+            <p class="planCardPrice"><span>$</span>180</p>
+            <p class="planCardSaving">*Ahorras $250 comparado al plan mensual.</p>
             <button class="planCardCallToAction">Escoger este <span></span></button>
           </div>
         </article>
       </section>
     </section>
+    <footer>
+      <section class="footerEnlaces">
+        <ul>
+          <lI><a href="#">Linkedin</a></lI>
+          <lI><a href="#">Crunchbase</a></lI>
+          <lI><a href="#">Hackernews</a></lI>
+        </ul>
+      </section>
+      <section>
+        <img src="/css/assets/img/logo-footer.svg" alt="">
+      </section>
+    </footer>
   </main>
 </body>
 </html>

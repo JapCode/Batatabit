@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/breakpoint-1.css" media="(min-width: 800px)">
+  <link rel="stylesheet" href="/css/breakpoint-1.css" media="(min-width: 410px)">
+  <link rel="stylesheet" href="/css/breakpoint-2.css" media="(min-width: 767px)">
   <title>Document</title>
 </head>
 <body>
@@ -26,10 +27,10 @@
         <p>Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
       </div>
       <section class="tableContainer">
-        <section class="mainTableContainer">
+        <section id="tableOne" class="mainTableContainer">
           <h3>Monedas</h3>
+          <a href="#tableTwo"><span class="tableArrowRight"></span></a>
           <div class="table">
-            <span class="tableArrowRight"></span>
             <div><h4>Bitcoin</h4></div>
             <div><p>$ 1.96 </p><span></span></div>
             <div><h4>Ethereum</h4></div>
@@ -41,10 +42,10 @@
           </div>
           <p class="tableUpdateDate"><b>Actualizado:</b> 19 Julio 23:45</p>
         </section>
-        <section class="mainTableContainer secondTable">
+        <section id="tableTwo" class="mainTableContainer secondTable">
           <h3>Comisiones</h3>
+          <a href="#tableOne"><span class="tableArrowLeft"></span></a>
           <div class="table">
-            <span class="tableArrowleft"></span>
             <div><h4>Bitrade</h4></div>
             <div><p>$ 12.96 </p></div>
             <div><h4>Bitpreco</h4></div>
@@ -60,7 +61,7 @@
     </section>
     <section class="mainProductsDetails">
       <span class="batataLogo"></span>
-      <div>
+      <div class="mainProductsDetailsTitle">
         <h3>Creamos un producto sin comparación.</h3>
         <p>Confiable y diseñado para su uso diario.</p>
       </div>

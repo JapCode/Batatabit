@@ -1,0 +1,22 @@
+main .mainExchangeContainer .tableContainer {
+  margin: 0 65px;
+  justify-content: center;
+}
+.tableArrowRight {
+  display: none;
+}
+.tableArrowLeft {
+  display: none;
+}
+main .mainPlansContainer .containerSlider {
+  margin: 0 65px;
+}
+.arrowRight,
+.arrowLeft {
+  display: none;
+}
+main .mainProductsDetails .productCardsContainer .productDetailCard {
+  display: inline-block;
+  width: 48%;
+  margin: 10px;
+}

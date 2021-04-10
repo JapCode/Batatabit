@@ -140,8 +140,35 @@ main .mainExchangeContainer .tableContainer {
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
-  overflow: hidden;
-  margin: 0 55px;
+  margin: 0 calc(50% - 105px);
+}
+main .mainExchangeContainer .tableContainer::-webkit-scrollbar {
+  display: none;
+}
+main .mainExchangeContainer .mainTableContainer {
+  position: relative;
+}
+.tableArrowRight {
+  width: 7.41px;
+  height: 14px;
+  background-image: url(/css/assets/icons/right-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 105%;
+  bottom: calc(100% - 168px);
+  display: block;
+}
+.tableArrowLeft {
+  width: 7.41px;
+  height: 14px;
+  background-image: url(/css/assets/icons/left-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+  position: absolute;
+  right: 105%;
+  bottom: calc(100% - 168px);
 }
 main .mainExchangeContainer .mainTableContainer .table {
   scroll-snap-align: center;
@@ -152,7 +179,6 @@ main .mainExchangeContainer .mainTableContainer .table {
   gap: 1.5px;
   max-width: 194px;
   min-width: 190px;
-  position: relative;
 }
 main .mainExchangeContainer .mainTableContainer h3 {
   color: var(--bitcoin-orange);
@@ -248,27 +274,7 @@ main .mainExchangeContainer .mainTableContainer.secondTable div p {
   text-align: center;
   margin: 0 auto;
 }
-main .tableArrowRight {
-  width: 7.41px;
-  height: 14px;
-  background-image: url(/css/assets/icons/right-arrow.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 105%;
-  bottom: calc(100% - 90px);
-}
-main .tableArrowleft {
-  width: 7.41px;
-  height: 14px;
-  background-image: url(/css/assets/icons/left-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-size: cover; */
-  position: absolute;
-  right: 105%;
-  bottom: calc(100% - 90px);
-}
+
 main .mainProductsDetails {
   background: var(--warm-black);
   position: relative;
@@ -288,13 +294,15 @@ main .mainProductsDetails .batataLogo {
   left: calc(50% - 20px);
   top: -10px;
 }
+main .mainProductsDetails .mainProductsDetailsTitle {
+  text-align: center;
+}
 main .mainProductsDetails h3 {
   color: var(--just-white);
   font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 2.6rem;
-  text-align: center;
   margin: 0 auto;
   margin-top: 64px;
 }
@@ -405,12 +413,14 @@ main .mainPlansContainer .containerSlider {
   display: flex;
   gap: 30px;
   align-items: center;
-  margin: 0 65px;
+  margin: 0 calc(50% - 95px);
   justify-content: space-between;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
-  overflow: hidden;
+}
+main .mainPlansContainer .containerSlider::-webkit-scrollbar {
+  display: none;
 }
 main .mainPlansContainer .containerSlider .plainsContainerCard {
   scroll-snap-align: center;
